@@ -1,0 +1,99 @@
+:root   {
+    --bg-color: rgb(209, 213, 222, 0.5);
+    --main-bg-color: white;
+    --input-bg-color: rgb(0, 126, 167, 0.75);
+    --text-color: #00171F;
+}
+
+*   {
+    margin: 0;
+    padding: 0;
+
+    color: var(--text-color);
+}
+
+body    {
+    background-color: var(--bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main    {
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+
+    border-radius: 8px;
+    background-color: var(--main-bg-color);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main div, main label    {
+    background-color: var(--main-bg-color);
+}
+
+input, button   {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.inputfield {
+    display: block;
+    top: 0px;
+    margin-bottom: 0.5rem;
+}
+
+#calcbutton,  #zoombutton   {
+    margin-top: 1rem;
+}
+
+#decaychart__box    {
+    display: flex;
+    flex-direction: column;
+}
+
+.decaychart__container  {
+    width: 75vw;
+}
+
+label[for="DECAYCHART"] {
+    font-size: 0.5em;
+}
+
+@media (max-width: 768px) {
+    body    {
+        background-color: var(--main-bg-color);
+    }
+    
+    main    {
+        display: block;
+        width: 99%;
+        padding: 0px;
+        box-shadow: none;
+    }
+
+    #inputs, #decaychart__box {
+        padding: 0px 1rem 1rem;
+    }
+    
+    .decaychart__container {
+        align-items: center;
+        width: auto;
+    }
+
+    label[for="DECAYCHART"] {
+        display: none;
+    }
+}

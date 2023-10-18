@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decay of Radioactive Element</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.1/chartjs-plugin-zoom.min.js" integrity="sha512-wUYbRPLV5zs6IqvWd88HIqZU/b8TBx+I8LEioQ/UC0t5EMCLApqhIAnUg7EsAzdbhhdgW07TqYDdH3QEXRcPOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Hammer JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Own files -->
+    <script src="dice.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <div id="inputs">
+            <label for="id">Tid: </label>
+            <input class="inputfield" id="tid" placeholder="Tid" type="text" inputmode="numeric" pattern="[0-9]+">
+    
+            <label for="tarningar">Antal tärningar: </label>
+            <input class="inputfield" id="tarningar" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
+    
+            <label for="sidor">Antal sidor på tärningen: </label>
+            <input class="inputfield" id="sidor" placeholder="Antal sidor på tärningen" value="6" type="text" inputmode="numeric" pattern="[0-9]+">
+    
+            <button id="input_calcbutton" type="submit" onclick="calculate()">Beräkna</button>
+        </div>
+
+        <div id="decaychart__box">
+            <div class="decaychart__container">
+                <canvas id="DECAYCHART"></canvas>
+            </div>
+
+
+            <label id="decaychart__label" for="DECAYCHART"> <b>Zoom: Shift + Scroll</b> </label>
+
+            <button id="zoombutton" onclick="resetZoomChart(decay_chart);">Reset Zoom</button> 
+
+            <!-- has to be loaded after canvas -->
+            <script src="chart.js"></script>
+        </div>
+
+    </main>
+    
+</body>
+</html>
