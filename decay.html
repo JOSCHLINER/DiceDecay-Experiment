@@ -15,30 +15,36 @@
     <!-- Own files -->
     <script src="scripts/dice.js"></script>
     <script src="scripts/script.js"></script>
-
 </head>
 
 <body>
 
     <main>
         <div id="inputs">
-            <label for="id">Tid: </label>
+            <label for="id">Antal kast: </label>
+            <input class="inputfield" id="tid" placeholder="Kast" type="text" inputmode="numeric" pattern="[0-9]+">
+    
             <label for="tarningar">Tärningar från början: </label>
             <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
     
             <label for="sidor">Antal sidor på tärningen: </label>
-            <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
-
-            <button id="input_calcbutton" type="submit" onclick="dicethrow()">Beräkna</button>
+            <input class="inputfield" id="sides" placeholder="Default: 6" value="6" type="text" inputmode="numeric" pattern="[0-9]+">
+    
+            <button id="input_calcbutton" type="submit" onclick="decayanalysis()">Beräkna</button>
         </div>
 
         <div id="decaychart__box">
             <div class="decaychart__container">
-                <canvas id="AMOUNTCHART"></canvas>
+                <canvas id="DECAYCHART"></canvas>
             </div>
 
+
+            <label id="decaychart__label" for="DECAYCHART"> <b>Zoom: Shift + Scroll</b> </label>
+
+            <button id="zoombutton" onclick="resetZoomChart(decay_chart);">Reset Zoom</button> 
+
             <!-- has to be loaded after canvas -->
-            <script src="./scripts/charts/amount.js"></script>
+            <script src="scripts/charts/chart.js"></script>
         </div>
 
     </main>
