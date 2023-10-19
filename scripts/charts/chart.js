@@ -21,6 +21,9 @@ const decay_chart = new Chart(ctx, {
         }
       },
       plugins: {
+        legend: {
+          display: false
+        },
         zoom: {
             limits: {
               // axis limits

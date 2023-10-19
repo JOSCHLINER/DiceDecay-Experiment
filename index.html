@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Decay of Radioactive Element</title>
+    <meta name="description" content="This project employs dice simulations to depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of radioactive decay.">
+    <meta name="keywords" content="Radioactive Element Decay with Dice, Teaching Derivatives and Statistics, STEM Dice Simulation for Radioactivity, Probability Analysis in Decay Simulation, Radioactive Decay Lesson, Classroom Experiment on Radioactive Elements">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/56517095?v=4" type="image/x-icon">
+
+
+
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
@@ -19,29 +27,37 @@
 </head>
 
 <body>
+    <!-- <header>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam omnis illo quia, eaque ut voluptatum, doloremque molestias culpa tenetur dolor ipsum excepturi sequi dolorum optio laudantium impedit, non aliquid voluptates.</header> -->
 
     <main>
-        <div id="inputs">
-            <label for="id">Tid: </label>
-            <label for="tarningar">Tärningar från början: </label>
-            <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
-    
-            <label for="sidor">Antal sidor på tärningen: </label>
-            <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
-
-            <button id="input_calcbutton" type="submit" onclick="dicethrow()">Beräkna</button>
+        <div class="information">
+            <h1>Hello</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus laboriosam animi maxime quas repudiandae aliquid, quam excepturi tenetur in sapiente quo impedit enim aut! Aliquam et similique nihil id!</p>    
         </div>
-
-        <div id="decaychart__box">
-            <div class="decaychart__container">
-                <canvas id="AMOUNTCHART"></canvas>
+    
+        <div class="main-content">
+            <div id="inputs">
+                <label for="tarningar"><b>Tärningar från början:</b></label>
+                <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
+        
+                <label for="sidor"><b>Sidor på tärningen:</b></label>
+                <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
+    
+                <button id="input_calcbutton" type="submit" onclick="dicethrow()" role="button">Beräkna</button>
             </div>
-
-            <!-- has to be loaded after canvas -->
-            <script src="./scripts/charts/amount.js"></script>
+    
+            <div id="decaychart__box">
+                <div class="decaychart__container">
+                    <canvas id="AMOUNTCHART"></canvas>
+                </div>
+            </div>
+            
         </div>
 
     </main>
+
+    <!-- has to be loaded after canvas -->
+    <script src="./scripts/charts/amount.js"></script>
     
 </body>
 </html>

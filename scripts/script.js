@@ -4,8 +4,6 @@ function decayanalysis()  {
     let sides = Number(Math.abs(document.getElementById("sides").value));
     let amountdices = Number(document.getElementById("dices").value);
 
-    console.log(sides);
-
     const dices = new dice(tid, amountdices, sides);
     let data = dices.getdata();
 
@@ -24,8 +22,6 @@ function dicethrow()    {
 
     const dices = new dice(tid, amountdices, sides);
     let data = dices.count();
-
-    console.log(data);
 
     amount_chart.data.datasets[0].data = data;
     amount_chart.data.labels = Array.from(data, (values, i) => i + 1);
