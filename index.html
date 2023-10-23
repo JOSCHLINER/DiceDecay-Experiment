@@ -17,9 +17,6 @@
 
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.1/chartjs-plugin-zoom.min.js" integrity="sha512-wUYbRPLV5zs6IqvWd88HIqZU/b8TBx+I8LEioQ/UC0t5EMCLApqhIAnUg7EsAzdbhhdgW07TqYDdH3QEXRcPOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Hammer JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Own files -->
     <script src="scripts/dice.js"></script>
     <script src="scripts/script.js"></script>
@@ -27,7 +24,9 @@
 </head>
 
 <body>
-    <!-- <header>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam omnis illo quia, eaque ut voluptatum, doloremque molestias culpa tenetur dolor ipsum excepturi sequi dolorum optio laudantium impedit, non aliquid voluptates.</header> -->
+    <header>
+
+    </header>
 
     <main>
         <div class="information">
@@ -36,15 +35,19 @@
         </div>
     
         <div class="main-content">
-            <div id="inputs">
-                <label for="tarningar"><b>Tärningar från början:</b></label>
-                <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
+            <div class="controlls">
+                <div id="inputs">
+                    <label for="dices"><b>Tärningar från början:</b></label>
+                    <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
+            
+                    <label for="sides"><b>Sidor på tärningen:</b></label>
+                    <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
         
-                <label for="sidor"><b>Sidor på tärningen:</b></label>
-                <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
-    
-                <button id="input_calcbutton" type="submit" onclick="dicethrow()" role="button">Beräkna</button>
-            </div>
+                    <button id="input_calcbutton" type="submit" onclick="dicethrow()">Beräkna</button>
+                </div>
+
+                <button class="copy" onclick="copy(amount_chart)"><b>Copy to Clipboard</b></button>
+            </div>  
     
             <div id="decaychart__box">
                 <div class="decaychart__container">

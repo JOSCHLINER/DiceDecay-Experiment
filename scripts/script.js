@@ -1,34 +1,58 @@
 
 function decayanalysis()  {
-    let tid = Number(document.getElementById("tid").value);
-    let sides = Number(Math.abs(document.getElementById("sides").value));
-    let amountdices = Number(document.getElementById("dices").value);
+    let tid = get_input("tid");
+    let sides = get_input("sides");
+    let amountdices = get_input("dices")
 
     const dices = new dice(tid, amountdices, sides);
     let data = dices.getdata();
 
-    decay_chart.data.datasets[0].data = data;
-    decay_chart.data.labels = Array.from(data, (values, i) => i);
-    
-    decay_chart.update();
+    edit_graph(decay_chart, data);
 }
 
-
 function dicethrow()    {
-    let tid = 1
-    let sides = Number(document.getElementById("sides").value);
-    let amountdices = Number(document.getElementById("dices").value);
-    console.log(amountdices);
+    let sides = get_input("sides");
+    let amountdices = get_input("dices");
 
-    const dices = new dice(tid, amountdices, sides);
+    const dices = new dice(1, amountdices, sides);
     let data = dices.count();
 
-    amount_chart.data.datasets[0].data = data;
-    amount_chart.data.labels = Array.from(data, (values, i) => i + 1);
-    
-    amount_chart.update();
+    edit_graph(amount_chart, data);
 }
 
 function resetZoomChart(chart)  {
     chart.resetZoom();
+}
+
+function copy(graph) {
+    let graphdata = graph.data.datasets[0].data;
+    if (graphdata.length > 10)    {
+        if (confirm('The to be copied data can be very large are you sure you want to continue?') == false)  {
+            return false;
+        }
+    }
+    let prepared_data = graphdata.join('	');
+
+    let cp_element = document.createElement('input');
+    cp_element.setAttribute('value', prepared_data);
+    document.body.appendChild(cp_element);
+
+    cp_element.select();
+    document.execCommand('copy');
+
+    cp_element.parentNode.removeChild(cp_element);
+}
+
+function edit_graph(graph, data, labeltemplate = "")  {
+    let label = Array.from(data, (values, i) => labeltemplate + (i + 1));
+
+    graph.data.datasets[0].data = data;
+    graph.data.labels = label;
+
+    graph.update();
+}
+
+function get_input(id)    {
+    let data = document.getElementById(id).value;
+    return data;
 }
