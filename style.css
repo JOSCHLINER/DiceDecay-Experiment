@@ -131,8 +131,16 @@ main    {
         margin: 0.5rem 1rem 1rem 1rem;
     }
 
+    .decaychart__container  {
+        margin: 0px 1rem;
+    }
+
     .zoomlabel, .copy {
         display: none;
+    }
+
+    .inputfield {
+        width: 98%;
     }
 }
 
@@ -152,3 +160,49 @@ input, button   {
 button  {
     cursor: pointer;
 }
+
+#CLIPBOARD  {
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+#DONE   {
+    fill: none;
+    stroke: green;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    stroke-dasharray: 111;
+    stroke-dashoffset: 111;
+}   
+
+.st1:hover  {
+    animation: draw-check 1.5s linear forwards;
+}
+
+.st0:hover  {
+    animation: clipboard 10 s linear forwards;
+}
+
+@keyframes draw-check {
+    0% {stroke-dashoffset: 111;}
+    40%, 68% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 111;}
+}
+
+@keyframes clipboard {
+    0% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 250;}
+}
+
+
+/* .st0{fill:none;stroke:#231F20;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st1{fill:none;stroke:#39B54A;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} */
