@@ -1,10 +1,10 @@
 
 function decayanalysis()  {
-    let tid = get_input("tid");
+    let time = get_input("tid");
     let sides = get_input("sides");
     let amountdices = get_input("dices")
 
-    const dices = new dice(tid, amountdices, sides);
+    const dices = new dice(amountdices, sides, time);
     let data = dices.getdata();
 
     edit_graph(decay_chart, data);
@@ -14,7 +14,7 @@ function dicethrow()    {
     let sides = get_input("sides");
     let amountdices = get_input("dices");
 
-    const dices = new dice(1, amountdices, sides);
+    const dices = new dice(amountdices, sides);
     let data = dices.count();
 
     edit_graph(amount_chart, data);
@@ -54,5 +54,5 @@ function edit_graph(graph, data, labeltemplate = "")  {
 
 function get_input(id)    {
     let data = document.getElementById(id).value;
-    return data;
+    return parseInt(data);
 }

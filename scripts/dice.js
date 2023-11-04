@@ -1,26 +1,27 @@
 class dice  {
 
-    constructor(time, dices, sides) {
+    constructor(dices, sides = 6, time = 1) {
         this.time = time;
         this.dices = dices;
-        if (sides == 0)   {sides = 6;}
+
+        if (Number.isNaN(sides))   {sides = 6}
         this.sides = sides;
     }
 
-    getdata() {
+    getdata(sides = 6) {
         let data = [];
         data.push(this.dices);
         for(let i = 1; i <= this.time; i++)    {
-            this.dices = this.throw(this.dices, this.sides); 
+            this.dices = this.throw(this.dices, sides); 
             data.push(this.dices);
         }
         return data;
     }
 
-    generator(sides)    {return Math.floor((Math.random() * sides) + 1)};
+    generator(sides)    {return Math.floor(Math.random() * sides) + 1};
 
     throw(amount, sides)    {
-        let removed = 0;
+        let removed = 0;    
         for(let i = 0; i < amount; i++)  {
             let random = this.generator(sides);
             if (random == 1)   {
