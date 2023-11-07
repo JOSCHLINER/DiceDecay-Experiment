@@ -55,4 +55,17 @@ function edit_graph(graph, data, labeltemplate = "")  {
 function get_input(id)    {
     let data = document.getElementById(id).value;
     return parseInt(data);
+}   
+
+// function to toggle the .animation class of a element('s)
+function toggleAnimation(element) {
+    let toggleElements = document.querySelectorAll(element);
+    
+    toggleElements.forEach(element => {
+        element.classList.toggle('animation');
+
+        element.addEventListener("animationend", () => {
+            element.classList.remove('animation');
+        });
+    });
 }

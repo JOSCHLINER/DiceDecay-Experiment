@@ -46,7 +46,19 @@
                     <button id="input_calcbutton" type="submit" onclick="dicethrow()">Beräkna</button>
                 </div>
 
-                <button class="copy" onclick="copy(amount_chart)"><b>Copy to Clipboard</b></button>
+                <button class="copy" onclick="copy(amount_chart); toggleAnimation('.clip_svg');"> 
+                    <svg class="clipboard_animation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                        <g id="CLIPBOARD">
+                            <polyline class="st0 clip_svg" points="73.32,16.98 87.05,16.98 87.05,91.09 12.95,91.09 12.95,16.98 26.68,16.98 		"/>
+                            <rect x="34.93" y="8.77" class="st0 clip_svg" width="30.14" height="16.13"/>
+                        </g>
+                        <g id="DONE">
+                            <polyline class="st1 clip_svg" points="89.12,23.8 55.65,57.27 36.72,76.2 10.88,50.37 	"/>
+                        </g>
+                    </svg>
+                    <span>Copy to Clipboard</span>
+                </button>
             </div>  
     
             <div id="decaychart__box">

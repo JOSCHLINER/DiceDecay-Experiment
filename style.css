@@ -66,7 +66,12 @@ main    {
 
     width: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
     font-size: 0.9em;
+    font-weight: 600;
 
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -161,6 +166,26 @@ button  {
     cursor: pointer;
 }
 
+button:active   {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.clipboard_animation    {
+    max-height: 2em;
+}
+
+.clipboard_animation .span   {
+    margin-left: 50%;
+}
+
+.st0.animation  {
+    animation: clipboard 1s linear forwards;
+}
+
+.st1.animation  {
+    animation: draw-check 1s linear forwards;
+}
+
 #CLIPBOARD  {
     fill: none;
     stroke: var(--text-color);
@@ -179,28 +204,25 @@ button  {
     stroke-miterlimit: 10;
 }
 
+.st0    {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+}
+
 .st1 {
     stroke-dasharray: 111;
     stroke-dashoffset: 111;
-}   
-
-.st1:hover  {
-    animation: draw-check 1.5s linear forwards;
-}
-
-.st0:hover  {
-    animation: clipboard 10 s linear forwards;
 }
 
 @keyframes draw-check {
     0% {stroke-dashoffset: 111;}
-    40%, 68% {stroke-dashoffset: 0;}
+    30%, 68% {stroke-dashoffset: 0;}
     100% {stroke-dashoffset: 111;}
 }
 
 @keyframes clipboard {
     0% {stroke-dashoffset: 0;}
-    100% {stroke-dashoffset: 250;}
+    30%, 60% {stroke-dashoffset: 250;}
 }
 
 
