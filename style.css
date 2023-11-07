@@ -2,6 +2,7 @@
     --bg-color:#404040e2;
     --main-bg-color:  #f1f1f1;
     --input-bg-color: #d7d7cf;
+    --input-bg-color-hover: rgba(199, 199, 189, 0.871);
     --input-contrast-color: #F7F7F7;
     --text-color: black;
 }
@@ -29,7 +30,7 @@ main    {
 
     border-radius: 8px;
     background-color: var(--main-bg-color);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .main-content   {
@@ -50,7 +51,7 @@ main    {
     padding: 0.5rem;
 
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 
     background-color: var(--input-bg-color);
 }
@@ -74,7 +75,6 @@ main    {
     font-weight: 600;
 
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .inputfield {
@@ -158,7 +158,7 @@ input, button   {
     color: var(--text-color);
     border: none;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     padding: 0.25em;
 }
 
@@ -166,8 +166,13 @@ button  {
     cursor: pointer;
 }
 
+button:hover    {
+    background-color: var(--input-bg-color-hover);
+}
+
 button:active   {
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
 }
 
 .clipboard_animation    {
@@ -179,11 +184,11 @@ button:active   {
 }
 
 .st0.animation  {
-    animation: clipboard 1s linear forwards;
+    animation: clipboard 1.5s linear forwards;
 }
 
 .st1.animation  {
-    animation: draw-check 1s linear forwards;
+    animation: draw-check 1.2s linear forwards;
 }
 
 #CLIPBOARD  {

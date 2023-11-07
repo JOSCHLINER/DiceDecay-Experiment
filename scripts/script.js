@@ -62,7 +62,7 @@ function toggleAnimation(element) {
     let toggleElements = document.querySelectorAll(element);
     
     toggleElements.forEach(element => {
-        element.classList.toggle('animation');
+        element.classList.add('animation');
 
         element.addEventListener("animationend", () => {
             element.classList.remove('animation');
