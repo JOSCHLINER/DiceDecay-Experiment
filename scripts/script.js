@@ -1,3 +1,9 @@
+window.onload = (event) => {
+
+/* Chart Definition*/
+const amount_chart = define();
+
+
 /* Event Listeners*/
 const copybutton = document.querySelector('.copy');
 copybutton.addEventListener("click", function(){ copy(amount_chart) });
@@ -78,3 +84,5 @@ function toggleAnimation(element) {
         });
     });
 }
+
+};
