@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Decay of Radioactive Element</title>
-    <meta name="description" content="This project employs dice simulations to depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of varying half-lives of various elements">
-    <meta name="keywords" content="Radioactive Element Decay with Dice, Teaching Derivatives and Statistics, STEM Dice Simulation for Radioactivity, Probability Analysis in Decay Simulation, Classroom Experiment on Radioactive Elements", "Half-live of element", "Dicethrow simulator", "STEM experiment">
+    <meta name="description"
+        content="This project employs dice simulations to depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of varying half-lives of various elements">
+    <meta name="keywords"
+        content="Radioactive Element Decay with Dice, Teaching Derivatives and Statistics, STEM Dice Simulation for Radioactivity, Probability Analysis in Decay Simulation, Classroom Experiment on Radioactive Elements"
+        , "Half-live of element" , "Dicethrow simulator" , "STEM experiment">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/56517095?v=4" type="image/x-icon">
 
 
 
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
@@ -25,53 +29,61 @@
     <main>
         <div class="information">
             <h1>Hello</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus laboriosam animi maxime quas repudiandae aliquid, quam excepturi tenetur in sapiente quo impedit enim aut! Aliquam et similique nihil id!</p>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus laboriosam animi maxime quas
+                repudiandae aliquid, quam excepturi tenetur in sapiente quo impedit enim aut! Aliquam et similique nihil
+                id!</p>
         </div>
-    
+
         <div class="main-content">
             <div class="controlls">
                 <div id="inputs">
                     <label for="dices"><b>Tärningar:</b></label>
-                    <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric" pattern="[0-9]+">
-            
+                    <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric"
+                        pattern="[0-9]+">
+
                     <label for="sides"><b>Sidor på tärningen:</b></label>
-                    <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
-        
+                    <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric"
+                        pattern="[0-9]+">
+
                     <button id="input_calcbutton" type="submit">Beräkna</button>
                 </div>
 
-                <button class="copy"> 
-                    <svg class="clipboard_animation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                <button class="copy">
+                    <svg class="clipboard_animation" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                        style="enable-background:new 0 0 100 100;" xml:space="preserve">
                         <g id="CLIPBOARD">
-                            <polyline class="st0 clip_svg" points="73.32,16.98 87.05,16.98 87.05,91.09 12.95,91.09 12.95,16.98 26.68,16.98 		"/>
-                            <rect x="34.93" y="8.77" class="st0 clip_svg" width="30.14" height="16.13"/>
+                            <polyline class="st0 clip_svg"
+                                points="73.32,16.98 87.05,16.98 87.05,91.09 12.95,91.09 12.95,16.98 26.68,16.98 		" />
+                            <rect x="34.93" y="8.77" class="st0 clip_svg" width="30.14" height="16.13" />
                         </g>
                         <g id="DONE">
-                            <polyline class="st1 clip_svg" points="89.12,23.8 55.65,57.27 36.72,76.2 10.88,50.37 	"/>
+                            <polyline class="st1 clip_svg" points="89.12,23.8 55.65,57.27 36.72,76.2 10.88,50.37 	" />
                         </g>
                     </svg>
                     <span>Copy to Clipboard</span>
                 </button>
-            </div>  
-    
+            </div>
+
             <div id="decaychart__box">
                 <div class="decaychart__container">
                     <canvas id="AMOUNTCHART"></canvas>
                 </div>
             </div>
-            
+
         </div>
 
     </main>
 
     <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"
+        async></script>
     <!-- has to be loaded after canvas -->
     <script src="./scripts/charts/amount.js"></script>
     <!-- Own files -->
     <script src="scripts/dice.js"></script>
     <script src="scripts/script.js"></script>
-    
+
 </body>
+
 </html>

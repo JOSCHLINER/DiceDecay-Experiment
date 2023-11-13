@@ -1,13 +1,13 @@
-:root   {
-    --bg-color:#404040e2;
-    --main-bg-color:  #f1f1f1;
+:root {
+    --bg-color: #404040e2;
+    --main-bg-color: #f1f1f1;
     --input-bg-color: #d7d7cf;
     --input-bg-color-hover: rgba(199, 199, 189, 0.871);
     --input-contrast-color: #F7F7F7;
     --text-color: black;
 }
 
-*   {
+* {
     margin: 0;
     padding: 0;
 
@@ -15,15 +15,15 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body    {
+body {
     background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
-main    {
+main {
     width: 75vw;
     margin: auto;
     padding: 10px;
@@ -33,7 +33,7 @@ main    {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.main-content   {
+.main-content {
     display: flex;
     padding-top: 1rem;
 }
@@ -56,12 +56,12 @@ main    {
     background-color: var(--input-bg-color);
 }
 
-#inputs label   {
+#inputs label {
     background-color: inherit;
     margin-bottom: 0.1rem;
 }
 
-.copy   {
+.copy {
     padding: 0.5rem;
     margin: 0.75rem 0.5rem 0px 0px;
 
@@ -87,7 +87,7 @@ main    {
     background-color: var(--input-contrast-color);
 }
 
- #zoombutton   {
+#zoombutton {
     margin-top: 1rem;
 }
 
@@ -95,7 +95,7 @@ main    {
     width: 100%;
 }
 
-#decaychart__box    {
+#decaychart__box {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -106,28 +106,28 @@ main    {
 }
 
 @media (max-width: 768px) {
-    body    {
+    body {
         background-color: var(--main-bg-color);
         align-items: flex-start;
         justify-content: center;
     }
-    
-    main    {
+
+    main {
         margin-top: 1.75rem;
         width: 100%;
         padding: 0px;
         box-shadow: none;
     }
 
-    .information    {
+    .information {
         margin: 0px 1rem;
     }
 
-    .main-content   {
+    .main-content {
         display: block;
     }
 
-    #decaychart__box    {
+    #decaychart__box {
         padding: 0px;
     }
 
@@ -136,11 +136,12 @@ main    {
         margin: 0.5rem 1rem 1rem 1rem;
     }
 
-    .decaychart__container  {
+    .decaychart__container {
         margin: 0px 1rem;
     }
 
-    .zoomlabel, .copy {
+    .zoomlabel,
+    .copy {
         display: none;
     }
 
@@ -149,11 +150,13 @@ main    {
     }
 }
 
-main div, main label    {
+main div,
+main label {
     background-color: var(--main-bg-color);
 }
 
-input, button   {
+input,
+button {
     background-color: var(--input-bg-color);
     color: var(--text-color);
     border: none;
@@ -162,36 +165,36 @@ input, button   {
     padding: 0.25em;
 }
 
-button  {
+button {
     cursor: pointer;
 }
 
-button:hover    {
+button:hover {
     background-color: var(--input-bg-color-hover);
 }
 
-button:active   {
+button:active {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     transform: translateY(1px);
 }
 
-.clipboard_animation    {
+.clipboard_animation {
     max-height: 2em;
 }
 
-.clipboard_animation .span   {
+.clipboard_animation .span {
     margin-left: 50%;
 }
 
-.st0.animation  {
+.st0.animation {
     animation: clipboard 1.5s linear forwards;
 }
 
-.st1.animation  {
+.st1.animation {
     animation: draw-check 1.2s linear forwards;
 }
 
-#CLIPBOARD  {
+#CLIPBOARD {
     fill: none;
     stroke: var(--text-color);
     stroke-width: 5;
@@ -200,7 +203,7 @@ button:active   {
     stroke-miterlimit: 10;
 }
 
-#DONE   {
+#DONE {
     fill: none;
     stroke: green;
     stroke-width: 5;
@@ -209,7 +212,7 @@ button:active   {
     stroke-miterlimit: 10;
 }
 
-.st0    {
+.st0 {
     stroke-dasharray: 250;
     stroke-dashoffset: 0;
 }
@@ -220,14 +223,29 @@ button:active   {
 }
 
 @keyframes draw-check {
-    0% {stroke-dashoffset: 111;}
-    30%, 68% {stroke-dashoffset: 0;}
-    100% {stroke-dashoffset: 111;}
+    0% {
+        stroke-dashoffset: 111;
+    }
+
+    30%,
+    68% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 111;
+    }
 }
 
 @keyframes clipboard {
-    0% {stroke-dashoffset: 0;}
-    30%, 60% {stroke-dashoffset: 250;}
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    30%,
+    60% {
+        stroke-dashoffset: 250;
+    }
 }
 
 
