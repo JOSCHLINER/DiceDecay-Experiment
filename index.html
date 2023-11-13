@@ -15,12 +15,6 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Own files -->
-    <script src="scripts/dice.js" async></script>
-    <script src="scripts/script.js" defer></script>
-
 </head>
 
 <body>
@@ -43,10 +37,10 @@
                     <label for="sides"><b>Sidor på tärningen:</b></label>
                     <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric" pattern="[0-9]+">
         
-                    <button id="input_calcbutton" type="submit" onclick="dicethrow()">Beräkna</button>
+                    <button id="input_calcbutton" type="submit">Beräkna</button>
                 </div>
 
-                <button class="copy" onclick="copy(amount_chart); toggleAnimation('.clip_svg');"> 
+                <button class="copy"> 
                     <svg class="clipboard_animation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
                         <g id="CLIPBOARD">
@@ -71,7 +65,13 @@
 
     </main>
 
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- has to be loaded after canvas -->
-    <script src="./scripts/charts/amount.js" async></script>
+    <script src="./scripts/charts/amount.js"></script>
+    <!-- Own files -->
+    <script src="scripts/dice.js"></script>
+    <script src="scripts/script.js"></script>
+    
 </body>
 </html>

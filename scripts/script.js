@@ -1,4 +1,13 @@
+/* Event Listeners*/
+const copybutton = document.querySelector('.copy');
+copybutton.addEventListener("click", function(){ copy(amount_chart) });
+copybutton.addEventListener("click", function(){ toggleAnimation('.clip_svg') });
 
+const calculate = document.querySelector('#input_calcbutton');
+calculate.addEventListener("click", dicethrow);
+
+
+/* Functions */
 function decayanalysis()  {
     let time = get_input("tid");
     let sides = get_input("sides");
