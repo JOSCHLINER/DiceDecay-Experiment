@@ -5,16 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Decay of Radioactive Element</title>
+    <title>Dice roll simulation</title>
     <meta name="description"
-        content="This project employs dice simulations to depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of varying half-lives of various elements">
+        content="This project employs a dice roll simulator. Which can depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of varying half-lives of various elements">
     <meta name="keywords"
-        content="Radioactive Element Decay with Dice, Teaching Derivatives and Statistics, STEM Dice Simulation for Radioactivity, Probability Analysis in Decay Simulation, Classroom Experiment on Radioactive Elements"
-        , "Half-live of element" , "Dicethrow simulator" , "STEM experiment">
+        content="Radioactive Element Decay with Dice, Teaching Derivatives and Statistics, STEM Dice Simulation for Radioactivity, Probability Analysis in Decay Simulation, Classroom Experiment on Radioactive Elements, Half-live of element, Dice roll simulator, STEM experiment">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/56517095?v=4" type="image/x-icon">
-
-
-
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -28,24 +24,27 @@
 
     <main>
         <div class="information">
-            <h1>Hello</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem natus laboriosam animi maxime quas
-                repudiandae aliquid, quam excepturi tenetur in sapiente quo impedit enim aut! Aliquam et similique nihil
-                id!</p>
+            <h1>Dice roll</h1>
+            <p>
+                The Dice Roll Tool is a versatile utility for generating pseudo-random dice rolls. Customize your
+                exploration by specifying the number of dice and sides per die.
+                This can be used for different visualizations of statistics like the decay of radioactive elements over
+                time. Read more about it
+                <a href="https://www.uwa.edu.au/study/-/media/faculties/science/docs/activity-decay-with-dice.pdf">here</a>.
+            </p>
+            <hr>
         </div>
 
         <div class="main-content">
             <div class="controlls">
                 <div id="inputs">
-                    <label for="dices"><b>Tärningar:</b></label>
-                    <input class="inputfield" id="dices" placeholder="Antal tärningar" type="text" inputmode="numeric"
-                        pattern="[0-9]+">
+                    <label for="dices"><b>Dices:</b></label>
+                    <input class="inputfield" id="dices" placeholder="Amount of dices" type="text" inputmode="numeric">
 
-                    <label for="sides"><b>Sidor på tärningen:</b></label>
-                    <input class="inputfield" id="sides" placeholder="Default: 6" type="text" inputmode="numeric"
-                        pattern="[0-9]+">
+                    <label for="sides"><b>Sides on the dices:</b></label>
+                    <input class="inputfield" id="sides" placeholder="Default: 6 " type="text" inputmode="numeric">
 
-                    <button id="input_calcbutton" type="submit">Beräkna</button>
+                    <button id="input_calcbutton" type="submit">Calculate</button>
                 </div>
 
                 <button class="copy">
@@ -76,8 +75,7 @@
     </main>
 
     <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"
-        async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- has to be loaded after canvas -->
     <script src="./scripts/charts/amount.js"></script>
     <!-- Own files -->
