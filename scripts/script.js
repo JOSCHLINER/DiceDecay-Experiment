@@ -11,6 +11,34 @@ copybutton.addEventListener("click", function () { toggleAnimation('.clip_svg') 
 const calculate = document.querySelector('#input_calcbutton');
 calculate.addEventListener("click", dicethrow);
 
+// theme toggler
+const darkreader = document.querySelector('#toggleTheme');
+const themeIcon = document.querySelector('#ThemeIcon')
+darkreader.addEventListener("click", function () {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+
+    if (themeIcon.alt == "Lightmode Icon") {
+        themeIcon.src = "images/dark_mode.svg";
+        themeIcon.alt = "Darkmode Icon";
+    } else {
+        themeIcon.src = "images/light_mode.svg";
+        themeIcon.alt = "Lightmode Icon";
+    }
+});
+
+/* Default Theme Setter*/
+if (window.matchMedia) {
+    // if user prefers dark color scheme, light is default
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('light-mode');
+
+        themeIcon.src = "images/light_mode.svg";
+        themeIcon.alt = "Lightmode Icon";
+    }
+}
+
 
 /* Functions */
 function decayanalysis() {
@@ -40,7 +68,7 @@ function resetZoomChart(chart) {
 
 function copy(graph) {
     let graphdata = graph.data.datasets[0].data;
-    if (graphdata.length > 10) {
+    if (graphdata.length > 25) {
         if (confirm('The to be copied data can be very large are you sure you want to continue?') == false) {
             return false;
         }
@@ -49,12 +77,6 @@ function copy(graph) {
 
     let lineArray = graphdata.join('	');
     console.log(lineArray)
-
-    // data.forEach(function (infoArray, index) {
-    //     let line = infoArray.join(",");
-    //     lineArray.push(index == 0 ? "data:text/csv;charset=utf-8," + line : line);
-    // });
-    // var csvContent = lineArray.join("\n");
 
     let cp_element = document.createElement('input');
     cp_element.setAttribute('value', lineArray);

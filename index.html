@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+    <title>Dice roll simulation</title>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dice roll simulation</title>
+    <meta name="color-scheme" content="dark light">
     <meta name="description"
         content="This project employs a dice roll simulator. Which can depict the progressive decay of elements over time. It offers insights into probability, statistics, and mathematical derivatives, showcasing the interplay between chance and scientific principles within the context of varying half-lives of various elements">
     <meta name="keywords"
@@ -17,14 +18,19 @@
 
 </head>
 
-<body>
+<body class="light-mode">
     <header>
-
+        <button id="toggleTheme"><img id="ThemeIcon" src="images\dark_mode.svg" alt="Darkmode Icon"></button>
     </header>
 
     <main>
         <div class="information">
             <h1>Dice roll</h1>
+
+            <noscript>
+                    <strong>I am sorry but this side is not functional without javascript, please enabled javascript or change browser</strong>
+            </noscript>
+
             <p>
                 The Dice Roll Tool is a versatile utility for generating pseudo-random dice rolls. Customize your
                 exploration by specifying the number of dice and sides per die.
