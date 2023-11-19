@@ -1,4 +1,4 @@
-function define() {
+function definegraph() {
 
     let ctx = document.getElementById('AMOUNTCHART');
 
