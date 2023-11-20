@@ -49,6 +49,11 @@ header button {
     background-color: var(--input-bg-color);
 }
 
+header button img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 /* main */
 main {
     width: 77vw;
